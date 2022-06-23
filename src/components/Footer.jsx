@@ -1,17 +1,8 @@
+import {MdSubscriptions} from 'react-icons/md'
 function Footer() {
   return (
-    <footer>
-      <ul>
-        <li>
-          <a href="#">Latest News</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Join Us</a>
-        </li>
-      </ul>
+    <footer className='sticky bottom-0 mx-[45%]'>
+    <MdSubscriptions className='text-center' size='2em'/>
     </footer>
   );
 }

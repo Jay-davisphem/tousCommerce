@@ -1,6 +1,8 @@
 import img from "../favicon.svg";
 import { AiOutlineMenuUnfold, AiOutlineMenuFold } from "react-icons/ai";
 import { useState, useCallback } from "react";
+import NavItems from './NavItems'
+
 function Header() {
   const [isToggle, setToggle] = useState(false);
   const toggle = useCallback(() => setToggle((isToggle) => !isToggle), []);
@@ -8,7 +10,7 @@ function Header() {
     <>
       <header className="flex items-center bg-white sticky md:relative top-0 inset-x-0 justify-between">
         <img src={img} className="w-16" />
-        <h2 className='font-special font-bold text-lg md:text-4xl justify-center'>NEWS FEEDER</h2>
+        <h2 className='font-special font-bold text-lg md:text-4xl justify-center'>News Feeder</h2>
         <div>
           {isToggle ? (
             <AiOutlineMenuUnfold
@@ -30,19 +32,7 @@ function Header() {
             />
           )}
         </div>
-        <nav className={`${isToggle ? "block absolute" : "hidden"} md:block`}>
-          <ul className={`${isToggle ? "block" : "flex gap-32"}`}>
-            <li>
-              <a href="#">Latest News</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Join Us</a>
-            </li>
-          </ul>
-        </nav>
+        <NavItems isToggle={isToggle} />
       </header>
       <section className='px-auto'>
         <div className='text-right'>
