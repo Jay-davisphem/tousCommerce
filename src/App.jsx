@@ -10,7 +10,7 @@ export default function App() {
     <BrowserRouter>
         <main>
           <Header />
-          <Routes>
+        <Routes>
           <Route index path="/" element={<NewsList />} />
           <Route path="/news-list/:id" element={<NewsDetail />} />
           <Route path="*" element={<NotFound />} />

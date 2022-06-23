@@ -20,10 +20,9 @@ function Header() {
     </header>
     <section>
               <a href="https://newsfeeder.vercel.app">
-                https://newsfeeder.verce l.app
+                https://newsfeeder.vercel.app
               </a>
             </section>
-            <Header />
               <section>
               <h2>NEWS FEEDER</h2>
               <div>
