@@ -6,13 +6,13 @@ function Header() {
   const toggle = useCallback(() => setToggle((isToggle) => !isToggle), []);
   return (
     <>
-      <header className="flex items-center justify-between">
+      <header className="flex items-center bg-white sticky md:relative top-0 inset-x-0 justify-between">
         <img src={img} className="w-16" />
-        <h2 className='font-special font-bold text-4xl justify-center'>NEWS FEEDER</h2>
+        <h2 className='font-special font-bold text-lg md:text-4xl justify-center'>NEWS FEEDER</h2>
         <div>
           {isToggle ? (
             <AiOutlineMenuUnfold
-              className="block md:hidden sticky"
+              className="block md:hidden"
               onClick={toggle}
               id="menu-button"
               aria-expanded="false"
@@ -21,7 +21,7 @@ function Header() {
             />
           ) : (
             <AiOutlineMenuFold
-              className="block md:hidden sticky"
+              className="block md:hidden"
               onClick={toggle}
               id="menu-button"
               aria-expanded="true"

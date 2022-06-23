@@ -8,8 +8,8 @@ import NotFound from "./components/NotFound";
 export default function App() {
   return (
     <BrowserRouter>
-      <main className="p-4 md:p-8 text-main">
-        <Header />
+      <main className="p-4 md:p-8 relative text-main">
+        <Header className='fixed'/>
         <Routes>
           <Route index path="/" element={<NewsList />} />
           <Route path="/news-list/:id" element={<NewsDetail />} />
