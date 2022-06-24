@@ -4,8 +4,9 @@ import NewsList from "./pages/newslist/NewsList";
 import NewsDetail from "./pages/newsdetail/NewsDetail";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import NotFound from "./components/NotFound";
+import NotFound from "./pages/notfound/NotFound";
 import axios from 'axios'
+
 export default function App() {
   const [news, setNews] = useState(null)
   const baseURL = 'https://api.currentsapi.services/v1/latest-news?apiKey='+import.meta.env.VITE_API_KEY
@@ -26,7 +27,7 @@ export default function App() {
         <Header className='fixed'/>
         <Routes>
           <Route index path="/" element={<NewsList newslist={news}/>} />
-          <Route path="/news-list/:id" element={<NewsDetail />} />
+          <Route path="/news-list/:id" element={<NewsDetail news={news}/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
