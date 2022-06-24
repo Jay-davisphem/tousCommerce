@@ -1,6 +1,6 @@
 import moment from 'moment'
 function NewsItem({news}) {
-  const newUrl = news.url.replace(/https:\/\/(www.)?/,'').replace(/\/.*/, '');
+  const newUrl = news.url.replace(/https?:\/\/(www.)?/,'').replace(/\/.*/, '');
   const newDate = news.published.replace('0000', '0100').replace(/\-/g, ' ')
   console.log(newDate)
   return (
