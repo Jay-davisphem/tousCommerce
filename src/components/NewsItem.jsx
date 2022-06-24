@@ -1,11 +1,13 @@
-function NewsItem() {
+import moment from 'moment'
+function NewsItem({news}) {
+  const newUrl = news.url.replace(/https:\/\/(www.)?/,'').replace(/\/.*/, '');
   return (
     <article className='my-8 shadow-lg p-4 md:py-8 shadow-grey'>
-      <h1 className='text-2xl md:text-4xl font-black mb-2 md:mb-8'>How to expand your business using social media</h1>
+      <a href={`/news-list/${news.id}`} className='text-2xl md:text-4xl font-black mb-2 md:mb-8'>{news.title}</a>
       <section className='flex text-xs md:mx-auto md:justify-start gap-4 md:gap-8 md:text-2xl'>
-        <span>Read full article on: </span>
+        <a href={news.url}>Read full article on the <span>{newUrl}</span> website</a>
         <span>
-          <a href="#">wwww.reallygreatsite.com</a>
+          {moment(news.published).fromNow()}
         </span>
       </section>
     </article>

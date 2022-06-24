@@ -1,5 +1,5 @@
 import NewsItem from "../../components/NewsItem";
-function NewsList() {
+function NewsList({newslist}) {
   return (
     <>
       <h3 className='md:ml-32 mt-16 mb-8 text-center text-2xl md:text-left'>BREAKING NEWS</h3>
@@ -10,8 +10,8 @@ function NewsList() {
           </a>
         </section>
         <section className='flex-col text-center md:text-left'>
-        {[1, 2, 3, 4, 5].map(() => (
-          <NewsItem />
+        {newslist?.map((news) => (
+          <NewsItem key={news.id} news={news}/>
         ))}
         </section>
       </main>
