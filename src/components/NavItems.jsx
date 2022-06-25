@@ -2,7 +2,7 @@ import {FcNews, FcAbout} from 'react-icons/fc'
 import {TbArrowsJoin2} from 'react-icons/tb'
 function NavItems({isToggle}){
   return (<>
-    <nav className={`${isToggle ? "md:hidden block absolute bg-white border border-t-0 shadow-md shadow-grey top-16 w-[100%] p-4" : "hidden"}`}>
+    <nav className={`${isToggle ? "md:hidden block absolute bg-white border border-t-0 shadow-md shadow-grey top-8 w-[100%] p-4" : "hidden"}`}>
             <ul className={`${isToggle ? "block" : "flex gap-32"}`}>
               <li className='my-4'>
                 <a href="/"><FcNews className='inline-block mr-4' size='2em'/>Latest News</a>

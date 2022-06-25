@@ -17,10 +17,3 @@ code {
     monospace;
 }
 
-.animee {
-  opacity: 1;
-  transition: opacity 1000sm ease-in;
-}
-.hid-it {
-  opacity: 0;
-}
