@@ -16,3 +16,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.animee {
+  opacity: 1;
+  transition: opacity 1000sm ease-in;
+}
+.hid-it {
+  opacity: 0;
+}

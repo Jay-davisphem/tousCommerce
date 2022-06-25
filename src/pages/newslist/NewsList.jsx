@@ -9,7 +9,7 @@ function NewsList({newslist}) {
             https://newsfeeder.vercel.app
           </a>
         </section>
-        <section className='flex-col text-center md:text-left'>
+        <section className='flex-col scrolee text-center md:text-left'>
         {newslist?.map((news) => (
           <NewsItem key={news.id} news={news}/>
         ))}
