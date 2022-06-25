@@ -10,7 +10,7 @@ import axios from 'axios'
 export default function App() {
   const [news, setNews] = useState(null)
   const [page, setPage] = useState(0)
-  const baseURL = 'https://api.currentsapi.services/v1/latest-news?apiKey='+import.meta.env.VITE_API_KEY+ '&page=2'
+  const baseURL = 'https://api.currentsapi.services/v1/latest-news?apiKey='+import.meta.env.VITE_API_KEY
   function getLatestNews(){
     axios.get(baseURL).then((response) => {
       setPage(response.data.page)
