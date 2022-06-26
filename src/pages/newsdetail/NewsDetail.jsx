@@ -32,7 +32,7 @@ function NewsDetail({news}) {
         </p>
       </article>
       <section className='mb-8 text-center mt-32'>
-        <a href={sNews?.url} className='border-2 py-4 px-16 md:px-32 rounded-lg md:py-8 text-xl md:text-2xl hover:bg-h-txt-cl hover:text-bg-cl'>Click to read more</a>
+        <a href={sNews?.url} className='border-2 py-4 px-16 md:px-32 rounded-lg md:py-8 text-lg md:text-2xl hover:bg-h-txt-cl hover:text-bg-cl'>Click to read more</a>
       </section>
     </article>
   );

@@ -18,7 +18,7 @@ function Header() {
   return (
     <>
       <header className="flex items-center bg-[#E9FFF9] sticky md:relative top-0 inset-x-0 justify-between">
-        <FcGlobe className="hover:opacity-50 p-1 rounded-full border shadow-md  shadow-txt-cl" size='3em'/>
+        <a href='/' className='outline-none bg-none'><FcGlobe className="hover:opacity-50 p-1 rounded-full border shadow-md  shadow-txt-cl" size='3em'/></a>
         <h2 className='font-special font-bold text-h-txt-cl text-lg md:text-4xl justify-center hover:underline'><a href='/'>News Feeder</a></h2>
         <div>
           {isToggle ? (
