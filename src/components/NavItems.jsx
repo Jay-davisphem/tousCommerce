@@ -11,7 +11,7 @@ function NavItems({isToggle}){
                 <a href="https://github.com/jay-davisphem" className='hover:underline'><FcAbout className='inline-block mr-4'size='2em'/>About</a>
               </li>
               <li className='my-4'>
-                <span className='hinline-block mr-4 over:underline cursor-pointer' onClick={() => alert('good boy')}><TbArrowsJoin2  size='2em'/>Join Us</span>
+                <span className='block mr-4 hover:underline cursor-pointer' onClick={() => alert('good boy')}><TbArrowsJoin2  className='inline-block mr-4'size='2em'/>Join Us</span>
               </li>
             </ul>
           </nav>
