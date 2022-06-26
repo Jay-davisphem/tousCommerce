@@ -8,10 +8,10 @@ function NewsItem({news}) {
   const newDate = news.published.replace('0000', '0100').replace(/\-/g, ' ')
   return (
     <article className={`my-8 shadow-lg p-4 md:py-8 shadow-grey`}>
-      <img src={news?.image || img} className='border      -0 mt-8 w-fit max-h-72 md:max-h-[32rem] rounded-lg'/>
-      <a href={`/news-list/${news.id}`} className='inline-block text-xl md:text-4xl font-black mb-4 md:mb-8'>{news.title}</a>
+      <img src={news?.image || img} className='hover:border hover:shadow-md border-0 mt-8 w-[100%] max-h-72 md:max-h-[32rem] rounded-lg'/>
+      <a href={`/news-list/${news.id}`} className='inline-block text-xl md:text-4xl font-black mb-4 text-h-text-cl md:mb-8 hover:underline'>{news.title}</a>
       <section className='flex text-xs md:mx-auto justify-between gap-4 md:gap-8 md:text-2xl'>
-        <a href={news.url}>Read full article... </a>
+        <a href={news.url} className='hover:underline'>Read full article... </a>
         <span>
           {moment(newDate).fromNow()}
         </span>

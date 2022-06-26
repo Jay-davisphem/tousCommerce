@@ -2,10 +2,10 @@ import NewsItem from "../../components/NewsItem";
 function NewsList({newslist}) {
   return (
     <>
-      <h3 className='md:ml-32 mt-16 mb-8 text-center text-2xl md:text-left'>BREAKING NEWS</h3>
+      <h3 className='md:ml-32 mt-16 mb-8 text-h-bg-cl text-center text-2xl md:text-left font-bold-1000'>BREAKING NEWS</h3>
       <main className='md:ml-32'>
-        <section className='text-md hidden md:block md:absolute md:bottom-[50%] text-black  md:left-0 rotate-90'>
-          <a href="https://newsfeeder.vercel.app">
+        <section className='text-xl hidden md:block md:absolute md:bottom-[50%] text-h-bg-cl  md:left-0 rotate-90'>
+          <a href="https://newsfeeder.vercel.app" className='hover:underline'>
             https://newsfeeder.vercel.app
           </a>
         </section>

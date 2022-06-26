@@ -16,22 +16,23 @@ function NewsDetail({news}) {
   return (
     <article>
       <figure className='border-0'>
-        <img src={checkImage(sNews?.image) || img} className='border-0 mt-8 w-full max-h-72 rounded-lg'/>
+        <img src={sNews?.image || img} className='hover:border hover:shadow-md border-0 mt-8 w-[100%] max-h-72 md:max-h-[32rem] rounded-lg'/>
       </figure>
       <article>
-        <h1 className='text-xl md:text-4xl text-center font-bold my-8'>{sNews?.title}</h1>
+        <h1 className='text-xl text-h-txt-cl md:text-4xl text-center font-bold my-8'>{sNews?.title}</h1>
         <div>
           <span className='text-right text-2xl md:text-3xl font-light'><h3>{moment(newDate).fromNow()}</h3></span>
-          <section className='flex wrap justify-around my-8'>
-            {sNews?.category?.map((cat, ind) => <span className='border p-2 hover:border-none cursor-pointer'key={ind}>{cat}</span>)}
+          <section className='flex wrap gap-4 place-center my-8'>
+            <span className='p-2'>Tags:</span>  
+            {'   '}{sNews?.category?.map((cat, ind) => <span className='border p-2 hover:opacity-75 hover:bg-white cursor-pointer'key={ind}>{cat}</span>)}
           </section>
         </div>
-        <p className='text-xl md:text-3xl font-light leading-relaxed p-0'>
+        <p className='text-xl md:text-3xl font-light leading-loose p-2'>
           {sNews?.description}
         </p>
       </article>
-      <section className='my-8 text-center'>
-        <a href={sNews?.url}>Click to read more</a>
+      <section className='mb-8 text-center mt-32'>
+        <a href={sNews?.url} className='border-2 py-4 px-16 md:px-32 rounded-lg md:py-8 text-xl md:text-2xl hover:bg-h-txt-cl hover:text-bg-cl'>Click to read more</a>
       </section>
     </article>
   );

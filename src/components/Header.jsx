@@ -1,6 +1,7 @@
 import img from "../favicon.svg";
 import { MdCancel as AiOutlineMenuUnfold } from "react-icons/md";
 import {GoThreeBars as AiOutlineMenuFold } from 'react-icons/go'
+import {FcGlobe} from 'react-icons/fc'
 import { useState, useCallback, useEffect } from "react";
 import NavItems from './NavItems'
 import moment from 'moment'
@@ -16,13 +17,13 @@ function Header() {
 }, []);
   return (
     <>
-      <header className="flex items-center bg-white sticky md:relative top-0 inset-x-0 justify-between">
-        <img src={img} className="w-8" />
-        <h2 className='font-special font-bold text-lg md:text-4xl justify-center'><a href='/'>News Feeder</a></h2>
+      <header className="flex items-center bg-[#E9FFF9] sticky md:relative top-0 inset-x-0 justify-between">
+        <FcGlobe className="hover:opacity-50 p-1 rounded-full border shadow-md  shadow-txt-cl" size='3em'/>
+        <h2 className='font-special font-bold text-h-txt-cl text-lg md:text-4xl justify-center hover:underline'><a href='/'>News Feeder</a></h2>
         <div>
           {isToggle ? (
             <AiOutlineMenuUnfold
-              className="block md:hidden"
+              className="block md:hidden hover:opacity-50"
               onClick={toggle}
               id="menu-button"
               aria-expanded="false"
@@ -31,7 +32,7 @@ function Header() {
             />
           ) : (
             <AiOutlineMenuFold
-              className="block md:hidden"
+              className="block md:hidden hover:opacity-50 border  border-2 hover:border-none"
               onClick={toggle}
               id="menu-button"
               aria-expanded="true"
