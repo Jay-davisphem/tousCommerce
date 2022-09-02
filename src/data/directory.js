@@ -45,7 +45,7 @@ const sections = [
     linkUrl: "shop/students",
   },
   {
-    title: "TECH GADGETS AND ELECTRONICS",
+    title: "GADGETS",
     imageUrl:
       "https://cdn.pixabay.com/photo/2013/12/22/15/30/motherboard-232515_960_720.jpg",
     size: "large",
@@ -53,7 +53,7 @@ const sections = [
     linkUrl: "shop/tech-electonics",
   },
   {
-    title: "UTENSILS AND DOMESTICS",
+    title: "HOME",
     imageUrl:
       "https://cdn.pixabay.com/photo/2017/02/24/17/44/retro-2095749_960_720.jpg",
     size: "large",
