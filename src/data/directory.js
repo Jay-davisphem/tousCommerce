@@ -20,14 +20,12 @@ const sections = [
   {
     title: "WOMENS",
     imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    size: "large",
     id: 4,
     linkUrl: "shop/womens",
   },
   {
     title: "MENS",
     imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    size: "large",
     id: 5,
     linkUrl: "shop/mens",
   },
@@ -35,7 +33,6 @@ const sections = [
     title: "CHILDRENS",
     imageUrl:
       "https://cdn.pixabay.com/photo/2013/07/13/12/43/kids-160168_960_720.png",
-    size: "large",
     id: 6,
     linkUrl: "shop/childrens",
   },
@@ -43,6 +40,7 @@ const sections = [
     title: "students",
     imageUrl:
       "https://cdn.pixabay.com/photo/2017/07/31/11/21/people-2557396_960_720.jpg",
+    size: "large",
     id: 7,
     linkUrl: "shop/students",
   },

@@ -1,12 +1,19 @@
-import './menu-item.scss'
+import "./menu-item.scss";
 
-const MenuItem = ({title}) => (
-  <div className='menu-item'>
-          <div className='content'>
-            <h1 className='title'>{title}</h1>
-            <span className='subtititle'>SHOP NOW</span>
-          </div>
-        </div>
-)
+const MenuItem = ({ title, imageUrl, size }) => {
+  return (
+    <div
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+      }}
+      className={`${size} menu-item`}
+    >
+      <div className="content">
+        <h1 className="title">{title}</h1>
+        <span className="subtititle">SHOP NOW</span>
+      </div>
+    </div>
+  );
+};
 
 export default MenuItem;
