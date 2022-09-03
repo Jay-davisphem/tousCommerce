@@ -244,6 +244,245 @@ const SHOP_DATA = [
       },
     ],
   },
+  {
+    id: 6,
+    title: "Childrens",
+    routeName: "childrens",
+    items: [
+      {
+        id: 36,
+        name: "Rocking Horse",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2012/04/13/21/32/rocking-horse-33719_960_720.png",
+        price: 100,
+      },
+      {
+        id: 37,
+        name: "Snow Man",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2015/12/12/22/35/snowman-1090261_960_720.jpg",
+        price: 25,
+      },
+      {
+        id: 38,
+        name: "Frog Men",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2018/05/31/15/06/see-no-evil-3444212_960_720.jpg",
+        price: 240,
+      },
+      {
+        id: 39,
+        name: "Chess",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2018/06/10/22/48/chess-3467512_960_720.jpg",
+        price: 1000,
+      },
+      {
+        id: 40,
+        name: "Brown Teddy Bear",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2015/11/19/15/37/child-1051288_960_720.jpg",
+        price: 40,
+      },
+      {
+        id: 41,
+        name: "Big Bunny",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2016/02/29/09/16/deco-bunny-1228281_960_720.jpg",
+        price: 25,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Students",
+    routeName: "students",
+    items: [
+      {
+        id: 42,
+        name: "Ball Pen",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2012/04/13/18/44/pen-33237_960_720.png",
+        price: 10,
+      },
+      {
+        id: 43,
+        name: "Arts and Crafts",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2017/08/28/17/36/school-supplies-2690530_960_720.jpg",
+        price: 2000,
+      },
+      {
+        id: 44,
+        name: "Books",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2018/04/01/18/18/books-3281648_960_720.png",
+        price: 250,
+      },
+      {
+        id: 45,
+        name: "Green Notepad",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2015/09/09/19/45/notepad-932864_960_720.jpg",
+        price: 100,
+      },
+      {
+        id: 46,
+        name: "Pencil Crayons",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2010/12/13/09/59/artistic-2061_960_720.jpg",
+        price: 40,
+      },
+      {
+        id: 47,
+        name: "Stationery Backpack",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2020/09/03/12/25/school-supplies-5541099_960_720.jpg",
+        price: 3000,
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Gadgets",
+    routeName: "gadgets",
+    items: [
+      {
+        id: 48,
+        name: "Drone",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2016/11/29/02/07/drone-1866742_960_720.jpg",
+        price: 550,
+      },
+      {
+        id: 49,
+        name: "Touchscreen Mobile Phone",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2016/12/09/11/33/smartphone-1894723_960_720.jpg",
+        price: 400,
+      },
+      {
+        id: 50,
+        name: "Consistent Display set",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2014/04/05/09/30/tablet-314153_960_720.png",
+        price: 2500,
+      },
+      {
+        id: 51,
+        name: "Smart Watch",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2015/06/25/17/21/smart-watch-821557_960_720.jpg",
+        price: 300,
+      },
+      {
+        id: 52,
+        name: "Iphone14",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2016/11/29/05/08/apple-1867461_960_720.jpg",
+        price: 1500,
+      },
+      {
+        id: 53,
+        name: "Virtual Reality Device",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2018/06/07/16/49/virtual-3460451_960_720.jpg",
+        price: 4000,
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Homes",
+    routeName: "homes",
+    items: [
+      {
+        id: 54,
+        name: "Sun Flower",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2018/04/05/14/09/sunflowers-3292932_960_720.jpg",
+        price: 200,
+      },
+      {
+        id: 55,
+        name: "Cactus",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2015/04/10/17/03/pots-716579_960_720.jpg",
+        price: 20,
+      },
+      {
+        id: 56,
+        name: "Silverware",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2014/06/26/08/56/cutlery-377700_960_720.jpg",
+        price: 250,
+      },
+      {
+        id: 57,
+        name: "Cinamon",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2018/01/03/06/19/sugar-3057660_960_720.jpg",
+        price: 30,
+      },
+      {
+        id: 58,
+        name: "Dishwasher",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2016/10/26/20/31/washing-machine-1772579_960_720.jpg",
+        price: 1500,
+      },
+      {
+        id: 59,
+        name: "Mortar and Pestle",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2014/09/06/12/32/mortar-and-pestle-436885_960_720.jpg",
+        price: 400,
+      },
+    ],
+  },
+  {
+    id: 10,
+    title: "Pets",
+    routeName: "pets",
+    items: [
+      {
+        id: 60,
+        name: "White Kitty",
+        imageUrl: "https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg",
+        price: 1000,
+      },
+      {
+        id: 61,
+        name: "Flower Kitten",
+        imageUrl: "https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_960_720.jpg",
+        price: 1200,
+      },
+      {
+        id: 62,
+        name: "White Puppy",
+        imageUrl: "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313_960_720.jpg",
+        price: 1000,
+      },
+      {
+        id: 63,
+        name: "Young Bulldong",
+        imageUrl: "https://cdn.pixabay.com/photo/2015/11/17/13/13/bulldog-1047518_960_720.jpg",
+        price: 1100,
+      },
+      {
+        id: 64,
+        name: "Corgi",
+        imageUrl: "https://cdn.pixabay.com/photo/2019/08/19/07/45/corgi-4415649_960_720.jpg",
+        price: 1200,
+      },
+      {
+        id: 65,
+        name: "Black Weimaraner",
+        imageUrl: "https://cdn.pixabay.com/photo/2013/07/07/04/58/weimaraner-143753_960_720.jpg",
+        price: 2500,
+      },
+    ],
+  },
 ];
 
 export default SHOP_DATA;
