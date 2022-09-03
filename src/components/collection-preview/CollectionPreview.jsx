@@ -1,3 +1,4 @@
+import CollectionItem from '../collection-item/CollectionItem'
 import './collection-preview.scss'
 
 const CollectionPreview = ({title, items}) =>{
@@ -6,8 +7,8 @@ const CollectionPreview = ({title, items}) =>{
       <h1 className='title'>{title.toUpperCase()}</h1>
         <div className='preview'>
           {
-            items.map((item) => (
-              <div key={item.id}>{item.name}</div>
+            items.slice(0, 4).map(({id, ...others}) => (
+              <CollectionItem key={id} {...others}/>
             ))
           }
         </div>
