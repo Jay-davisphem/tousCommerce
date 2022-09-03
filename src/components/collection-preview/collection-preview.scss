@@ -13,3 +13,9 @@
     justify-content: space-between;
   }
 }
+@media (max-width: 800px) {
+  .preview {
+    flex-wrap: wrap;
+    row-gap: 4em;
+  }
+}
