@@ -1,8 +1,6 @@
-import './sign-up.scss'
+import "./sign-up.scss";
 const SignUpPage = () => {
-  return (
-    <div></div>
-  )
-}
+  return <div></div>;
+};
 
-export default SignUpPage
+export default SignUpPage;

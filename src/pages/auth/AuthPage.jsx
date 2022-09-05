@@ -1,7 +1,10 @@
-import './auth.scss'
+import SignInPage from './SignInPage'
+import "./auth.scss";
 
 const AuthPage = () => {
-  <div className='auth'>SIGN IN</div>
-}
+  return <div className="auth">
+    <SignInPage />
+  </div>;
+};
 
 export default AuthPage;
