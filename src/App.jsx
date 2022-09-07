@@ -14,7 +14,7 @@ function App() {
   let unsubscribeAuth = null;
   useEffect(() => {
     unsubscribeAuth = auth.onAuthStateChanged(user => {
-      setState(state => ({...state, currentUser: user.multiFactor.user}))
+      setState(state => ({...state, currentUser: user?.multiFactor.user}))
       console.log(`${user?.multiFactor.user.displayName} | ${user?.multiFactor.user.email}`)
     })
     return () => {
