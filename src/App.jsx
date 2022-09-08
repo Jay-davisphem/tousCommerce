@@ -5,7 +5,7 @@ import ShopPage from "./pages/shop/ShopPage";
 import Header from "./components/header/Header";
 import AuthPage from "./pages/auth/AuthPage";
 import {auth} from './firebase/firebase.utils';
-
+import {createUserProfileDocument} from './firebase/userProfile'
 import "./App.css";
 
 function App() {
@@ -13,8 +13,9 @@ function App() {
   
   let unsubscribeAuth = null;
   useEffect(() => {
-    unsubscribeAuth = auth.onAuthStateChanged(user => {
-      setState(state => ({...state, currentUser: user?.multiFactor.user}))
+    unsubscribeAuth = auth.onAuthStateChanged(async user => {
+      createUserProfileDocument(user)
+      //setState(state => ({...state, currentUser: user?.multiFactor.user}))
       console.log(`${user?.multiFactor.user.displayName} | ${user?.multiFactor.user.email}`)
     })
     return () => {
