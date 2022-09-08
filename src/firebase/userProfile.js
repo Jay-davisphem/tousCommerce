@@ -21,4 +21,5 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   } else {
     console.info("There is a user with that name.");
   }
+  return docRef;
 };

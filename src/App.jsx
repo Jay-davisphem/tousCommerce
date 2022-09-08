@@ -13,10 +13,23 @@ function App() {
   
   let unsubscribeAuth = null;
   useEffect(() => {
-    unsubscribeAuth = auth.onAuthStateChanged(async user => {
-      createUserProfileDocument(user)
-      //setState(state => ({...state, currentUser: user?.multiFactor.user}))
-      console.log(`${user?.multiFactor.user.displayName} | ${user?.multiFactor.user.email}`)
+    unsubscribeAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth){
+        const docRef = await createUserProfileDocument(userAuth);
+
+        docRef?.onSnapshot(snapShot => {
+          setState(state => ({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          }))
+        })
+        console.log(state)
+      }
+      else{
+      setState(state => ({currentUser: userAuth}));
+      }
     })
     return () => {
       unsubscribeAuth()
