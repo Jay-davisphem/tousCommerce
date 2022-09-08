@@ -1,8 +1,8 @@
 import './custom-button.scss'
 
-const CustomButton = ({children, ...others}) => {
+const CustomButton = ({children, isGoogleButton, ...others}) => {
   return (
-    <button className='custom-button' {...others}>
+    <button className={`${isGoogleButton? 'google-custom-button': ''} custom-button`} {...others}>
       {children}
     </button>
   )

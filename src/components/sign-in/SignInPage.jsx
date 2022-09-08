@@ -36,8 +36,10 @@ const SignInPage = () => {
           handleChange={handleChange}
           required
         />
+        <div className='buttons'>
         <CustomButton type="submit">Sign In</CustomButton>
-        <CustomButton onClick={signInWithGoogle}>Sign In Google</CustomButton>
+        <CustomButton onClick={signInWithGoogle} isGoogleButton>Sign In Google</CustomButton>
+        </div>
       </form>
     </div>
   );
