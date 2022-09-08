@@ -1,44 +1,45 @@
 import { Routes, Route } from "react-router-dom";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop/ShopPage";
 import Header from "./components/header/Header";
 import AuthPage from "./pages/auth/AuthPage";
-import {auth} from './firebase/firebase.utils';
-import {createUserProfileDocument} from './firebase/userProfile'
+import { auth } from "./firebase/firebase.utils";
+import { createUserProfileDocument } from "./firebase/userProfile";
 import "./App.css";
 
 function App() {
-  const [state, setState] = useState({currentUser: null})
-  
+  const [state, setState] = useState({ currentUser: null });
+
   let unsubscribeAuth = null;
   useEffect(() => {
-    unsubscribeAuth = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth){
-        const docRef = await createUserProfileDocument(userAuth);
+    unsubscribeAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
 
-        docRef?.onSnapshot(snapShot => {
-          setState(state => ({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
-          }))
-        })
-        console.log(state)
+        userRef?.onSnapshot((snapShot) => {
+          setState((state) => {
+            return {
+              currentUser: {
+                di: 4,
+                id: snapShot.id,
+                ...snapShot.data(),
+              },
+            };
+          });
+        });
+      } else {
+        setState((state) => ({ currentUser: userAuth }));
       }
-      else{
-      setState(state => ({currentUser: userAuth}));
-      }
-    })
+    });
     return () => {
-      unsubscribeAuth()
-    }
-  }, [])
+      unsubscribeAuth();
+    };
+  }, []);
 
   return (
     <main>
-      <Header currentUser={state.currentUser}/>
+      <Header currentUser={state.currentUser} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />

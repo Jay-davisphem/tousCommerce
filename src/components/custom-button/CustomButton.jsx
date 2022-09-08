@@ -1,11 +1,16 @@
-import './custom-button.scss'
+import "./custom-button.scss";
 
-const CustomButton = ({children, isGoogleButton, ...others}) => {
+const CustomButton = ({ children, isGoogleButton, ...others }) => {
   return (
-    <button className={`${isGoogleButton? 'google-custom-button': ''} custom-button`} {...others}>
+    <button
+      className={`${
+        isGoogleButton ? "google-custom-button" : ""
+      } custom-button`}
+      {...others}
+    >
       {children}
     </button>
-  )
-}
+  );
+};
 
-export default CustomButton
+export default CustomButton;

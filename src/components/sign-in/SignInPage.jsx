@@ -1,7 +1,7 @@
 import { useState } from "react";
-import FormInput from '../form-input/FormInput'
-import CustomButton from '../custom-button/CustomButton'
-import { signInWithGoogle } from '../../firebase/firebase.utils'
+import FormInput from "../form-input/FormInput";
+import CustomButton from "../custom-button/CustomButton";
+import { signInWithGoogle } from "../../firebase/firebase.utils";
 import "./sign-in.scss";
 const SignInPage = () => {
   const [state, setState] = useState({ email: "", password: "" });
@@ -21,7 +21,7 @@ const SignInPage = () => {
 
       <form onSubmit={handleSubmit}>
         <FormInput
-          label='Email'
+          label="Email"
           name="email"
           type="email"
           value={state.email}
@@ -29,16 +29,18 @@ const SignInPage = () => {
           required
         />
         <FormInput
-          label='Password'
+          label="Password"
           name="password"
           type="password"
           value={state.password}
           handleChange={handleChange}
           required
         />
-        <div className='buttons'>
-        <CustomButton type="submit">Sign In</CustomButton>
-        <CustomButton onClick={signInWithGoogle} isGoogleButton>Sign In Google</CustomButton>
+        <div className="buttons">
+          <CustomButton type="submit">Sign In</CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleButton>
+            Sign In Google
+          </CustomButton>
         </div>
       </form>
     </div>
