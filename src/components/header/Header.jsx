@@ -21,7 +21,7 @@ const Header = ({ currentUser }) => {
             onClick={() => auth.signOut()}
             title={`${window.location.origin}/auth`}
           >
-            Sign Out
+            SIGN OUT
           </div>
         ) : (
           <Link className="option" to="/auth">
