@@ -44,6 +44,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/auth" element={<AuthPage />} />
+        <Route path="/patterns" element={<AuthPage />} />
       </Routes>
     </main>
   );
