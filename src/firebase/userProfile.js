@@ -9,7 +9,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     const createdAt = new Date();
 
     try {
-      await userRef.set({
+      await docRef.set({
         displayName,
         email,
         createdAt,
