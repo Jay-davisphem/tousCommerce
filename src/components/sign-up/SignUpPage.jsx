@@ -48,6 +48,7 @@ const SignUpPage = () => {
       <form className="sign-up-form" onSubmit={handleSubmit}>
         <FormInput
           type="text"
+          value={userAuth.displayName}
           name="displayName"
           handleChange={handleChange}
           label="Display Name"
@@ -56,6 +57,7 @@ const SignUpPage = () => {
 
         <FormInput
           type="email"
+          value={userAuth.email}
           name="email"
           handleChange={handleChange}
           label="Email"
@@ -63,6 +65,7 @@ const SignUpPage = () => {
         />
         <FormInput
           type="password"
+          value={userAuth.password}
           name="password"
           handleChange={handleChange}
           label="Password"
@@ -70,6 +73,7 @@ const SignUpPage = () => {
         />
         <FormInput
           type="password"
+          value={userAuth.confirmPassword}
           name="confirmPassword"
           handleChange={handleChange}
           label="Confirm Password"
