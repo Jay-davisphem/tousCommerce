@@ -1,15 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop/ShopPage";
 import Header from "./components/header/Header";
 import AuthPage from "./pages/auth/AuthPage";
 import { auth } from "./firebase/firebase.utils";
 import { createUserProfileDocument } from "./firebase/userProfile";
+import { setCurrentUser } from "./redux/user/user.actions";
 import "./App.css";
 
 function App() {
-  const [state, setState] = useState({ currentUser: null });
+  const dispatch = useDispatch();
 
   let unsubscribeAuth = null;
   useEffect(() => {
@@ -18,18 +20,20 @@ function App() {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef?.onSnapshot((snapShot) => {
-          setState((state) => {
+          const currUser = {
+            id: snapShot.id,
+            ...snapShot.data(),
+          };
+          dispatch(setCurrentUser(currUser))
+          /*setState((state) => {
             return {
-              currentUser: {
-                di: 4,
-                id: snapShot.id,
-                ...snapShot.data(),
-              },
+              currUser,
             };
-          });
+          }); */
         });
       } else {
-        setState((state) => ({ currentUser: userAuth }));
+        dispatch(setCurrentUser(userAuth))
+        //setState((state) => ({ currentUser: userAuth }));
       }
     });
     return () => {
@@ -39,7 +43,7 @@ function App() {
 
   return (
     <main>
-      <Header currentUser={state.currentUser} />
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />

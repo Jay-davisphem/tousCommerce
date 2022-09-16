@@ -1,13 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { createStore, applyMiddleware } from "redux";
 import logger from "redux-logger";
 
-import userReducer from "./user/userSlice";
+import rootReducer from "./root-reducer";
 
-const store = configureStore({
-  reducer: {
-    user: userReducer,
-  },
-  middleware: (getDefaultMiddlwware) => getDefaultMiddlwware().concat(logger),
-});
+const middlewares = [logger];
 
-export default store;
+export const store = createStore(rootReducer, applyMiddleware(...middlewares));
