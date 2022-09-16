@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import logo from "../../assets/tousLogo.png";
 import { auth } from "../../firebase/firebase.utils";
 const Header = () => {
-  const currentUser = useSelector(state => state.currentUser)
+  const currentUser = useSelector(state => state.user.currentUser)
   return (
     <div className="header">
       <Link className="logo-container" to="/">

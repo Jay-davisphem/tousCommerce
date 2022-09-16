@@ -7,11 +7,12 @@ import Header from "./components/header/Header";
 import AuthPage from "./pages/auth/AuthPage";
 import { auth } from "./firebase/firebase.utils";
 import { createUserProfileDocument } from "./firebase/userProfile";
-import { setCurrentUser } from "./redux/user/user.actions";
+import { userActions } from "./redux";
 import "./App.css";
 
 function App() {
   const dispatch = useDispatch();
+  const {setCurrentUser} = userActions
 
   let unsubscribeAuth = null;
   useEffect(() => {
