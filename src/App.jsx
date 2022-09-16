@@ -1,6 +1,6 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop/ShopPage";
 import Header from "./components/header/Header";
@@ -11,8 +11,10 @@ import { userActions } from "./redux";
 import "./App.css";
 
 function App() {
-  const dispatch = useDispatch();
   const {setCurrentUser} = userActions
+  
+  const dispatch = useDispatch();
+  const currentUser = useSelector(state => state.user.currentUser)
 
   let unsubscribeAuth = null;
   useEffect(() => {
@@ -48,8 +50,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
-        <Route path="/auth" element={<AuthPage />} />
-        <Route path="/patterns" element={<AuthPage />} />
+        <Route path="/auth" element={currentUser? <Navigate to='/' replace/>:<AuthPage />} />
       </Routes>
     </main>
   );
