@@ -7,7 +7,7 @@ import CartIcon from "../cart-icon/CartIcon";
 import CartDropdown from "../cart-dropdown/CartDropdown";
 const Header = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
-  const hidden = useSelector(state => state.cart.hidden)
+  const hidden = useSelector((state) => state.cart.hidden);
   return (
     <div className="header">
       <Link className="logo-container" to="/">
@@ -36,7 +36,7 @@ const Header = () => {
 
         <CartIcon />
       </div>
-      {hidden && <CartDropdown />}
+      {!hidden && <CartDropdown />}
     </div>
   );
 };

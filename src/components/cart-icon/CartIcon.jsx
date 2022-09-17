@@ -1,10 +1,10 @@
 import "./cart-icon.scss";
-import {useDispatch} from 'react-redux'
+import { useDispatch } from "react-redux";
 import imgSrc from "../../assets/shopping-bag.svg";
-import {cartActions} from '../../redux'
+import { cartActions } from "../../redux";
 const CartIcon = () => {
-  const {toggleCartHidden} = cartActions
-  const dispatch = useDispatch()
+  const { toggleCartHidden } = cartActions;
+  const dispatch = useDispatch();
 
   return (
     <div className="cart-icon" onClick={() => dispatch(toggleCartHidden())}>
