@@ -1,9 +1,9 @@
-import {userActionTypes} from './user.types'
+import userActionTypes from "./user.types";
 const INITIAL_STATE = {
   currentUser: null,
 };
 
-const {SET_CURRENT_USER} = userActionTypes
+const { SET_CURRENT_USER } = userActionTypes;
 
 const userReducer = (state = INITIAL_STATE, action) => {
   const { type, payload } = action;

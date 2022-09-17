@@ -8,15 +8,14 @@ const SignInPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const {email, password } = state;
+    const { email, password } = state;
 
-    try{
-      await auth.signInWithEmailAndPassword(email, password)
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
       setState({ email: "", password: "" });
-    }catch(error){
+    } catch (error) {
       console.error(error);
     }
-
   };
   const handleChange = (e) => {
     const { value, name } = e.target;

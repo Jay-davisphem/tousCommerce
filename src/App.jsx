@@ -11,10 +11,10 @@ import { userActions } from "./redux";
 import "./App.css";
 
 function App() {
-  const {setCurrentUser} = userActions
-  
+  const { setCurrentUser } = userActions;
+
   const dispatch = useDispatch();
-  const currentUser = useSelector(state => state.user.currentUser)
+  const currentUser = useSelector((state) => state.user.currentUser);
 
   let unsubscribeAuth = null;
   useEffect(() => {
@@ -27,7 +27,7 @@ function App() {
             id: snapShot.id,
             ...snapShot.data(),
           };
-          dispatch(setCurrentUser(currUser))
+          dispatch(setCurrentUser(currUser));
           /*setState((state) => {
             return {
               currUser,
@@ -35,7 +35,7 @@ function App() {
           }); */
         });
       } else {
-        dispatch(setCurrentUser(userAuth))
+        dispatch(setCurrentUser(userAuth));
         //setState((state) => ({ currentUser: userAuth }));
       }
     });
@@ -50,7 +50,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
-        <Route path="/auth" element={currentUser? <Navigate to='/' replace/>:<AuthPage />} />
+        <Route
+          path="/auth"
+          element={currentUser ? <Navigate to="/" replace /> : <AuthPage />}
+        />
       </Routes>
     </main>
   );
