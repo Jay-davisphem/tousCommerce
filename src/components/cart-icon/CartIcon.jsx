@@ -2,15 +2,14 @@ import "./cart-icon.scss";
 import { useDispatch, useSelector } from "react-redux";
 import imgSrc from "../../assets/shopping-bag.svg";
 import { cartActions } from "../../redux";
+import {selectCartItemsCount} from '../../redux/cart/cart.selectors'
+
 const CartIcon = () => {
   const { toggleCartHidden } = cartActions;
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
   const itemCount = useSelector(state => {
-    console.error('I am being called!')
-    return state.cart.cartItems
-      .reduce((acc, cartItem) => acc + cartItem.quantity, 0)
-}
-)
+    return selectCartItemsCount(state)
+  })
 
   return (
     <div className="cart-icon" onClick={() => dispatch(toggleCartHidden())}>
