@@ -5,9 +5,12 @@ import logo from "../../assets/tousLogo.png";
 import { auth } from "../../firebase/firebase.utils";
 import CartIcon from "../cart-icon/CartIcon";
 import CartDropdown from "../cart-dropdown/CartDropdown";
+import {selectCartHidden} from '../../redux/cart/cart.selectors'
+import {selectCurrentUser} from '../../redux/user/user.selectors'
+
 const Header = () => {
-  const currentUser = useSelector((state) => state.user.currentUser);
-  const hidden = useSelector((state) => state.cart.hidden);
+  const currentUser = useSelector((state) => selectCurrentUser(state));
+  const hidden = useSelector((state) => selectCartHidden(state));
   return (
     <div className="header">
       <Link className="logo-container" to="/">
