@@ -1,10 +1,13 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
+import Header from "./components/header/Header";
 import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop/ShopPage";
-import Header from "./components/header/Header";
 import AuthPage from "./pages/auth/AuthPage";
+import CheckoutPage from './pages/checkout/Checkout'
+
 import { auth } from "./firebase/firebase.utils";
 import { createUserProfileDocument } from "./firebase/userProfile";
 import { selectCurrentUser } from './redux/user/user.selectors'
@@ -51,6 +54,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
         <Route
           path="/auth"
           element={currentUser ? <Navigate to="/" replace /> : <AuthPage />}
