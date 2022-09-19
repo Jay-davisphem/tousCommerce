@@ -1,6 +1,6 @@
 import "./cart-icon.scss";
 import { useDispatch, useSelector } from "react-redux";
-import imgSrc from "../../assets/shopping-bag.svg";
+import {FiShoppingCart as BsBag} from 'react-icons/fi'
 import { cartActions } from "../../redux";
 import {selectCartItemsCount} from '../../redux/cart/cart.selectors'
 
@@ -13,7 +13,7 @@ const CartIcon = () => {
 
   return (
     <div className="cart-icon" onClick={() => dispatch(toggleCartHidden())}>
-      <img src={imgSrc} className="shopping-icon" />
+      <BsBag className='shopping-icon' />
       <span className="item-count">{itemCount}</span>
     </div>
   );
