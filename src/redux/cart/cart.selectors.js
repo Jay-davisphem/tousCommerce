@@ -1,7 +1,6 @@
 import { createSelector } from "reselect";
 
 const selectCart = (state) => {
-  console.debug("I am being called!");
   return state.cart;
 };
 

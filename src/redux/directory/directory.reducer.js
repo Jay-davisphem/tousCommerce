@@ -7,7 +7,6 @@ const INITIAL_DATA = {
 const directoryReducer = (state = INITIAL_DATA, action) => {
   switch (action.type) {
     default:
-      console.log("Here");
       return state;
   }
 };
