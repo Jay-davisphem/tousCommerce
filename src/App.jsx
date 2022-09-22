@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import Error404 from './components/error/error-404/Error404' 
 import Header from "./components/header/Header";
 import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop/ShopPage";
@@ -13,6 +14,7 @@ import { createUserProfileDocument } from "./firebase/userProfile";
 import { selectCurrentUser } from './redux/user/user.selectors'
 import { userActions } from "./redux";
 import "./App.css";
+
 
 function App() {
   const { setCurrentUser } = userActions;
@@ -60,6 +62,7 @@ function App() {
           path="/auth"
           element={currentUser ? <Navigate to="/" replace /> : <AuthPage />}
         />
+        <Route path='*' element={<Error404 />} />
       </Routes>
     </main>
   );
