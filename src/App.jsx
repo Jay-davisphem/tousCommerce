@@ -7,7 +7,7 @@ import HomePage from "./pages/homepage/HomePage";
 import ShopPage from "./pages/shop/ShopPage";
 import AuthPage from "./pages/auth/AuthPage";
 import CheckoutPage from './pages/checkout/Checkout'
-
+import CollectionPage from './pages/collection/Collection'
 import { auth } from "./firebase/firebase.utils";
 import { createUserProfileDocument } from "./firebase/userProfile";
 import { selectCurrentUser } from './redux/user/user.selectors'
@@ -54,6 +54,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
+        <Route path="/shop/:collectionId" element={<CollectionPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route
           path="/auth"
