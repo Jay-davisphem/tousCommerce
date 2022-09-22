@@ -1,5 +1,5 @@
-const SHOP_DATA = [
-  {
+const SHOP_DATA = {
+  hats: {
     id: 1,
     title: "Hats",
     routeName: "hats",
@@ -60,7 +60,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  sneakers: {
     id: 2,
     title: "Sneakers",
     routeName: "sneakers",
@@ -115,7 +115,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  jackets: {
     id: 3,
     title: "Jackets",
     routeName: "jackets",
@@ -152,7 +152,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  womens: {
     id: 4,
     title: "Womens",
     routeName: "womens",
@@ -201,7 +201,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  mens: {
     id: 5,
     title: "Mens",
     routeName: "mens",
@@ -244,7 +244,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  childrens: {
     id: 6,
     title: "Childrens",
     routeName: "childrens",
@@ -293,7 +293,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  students: {
     id: 7,
     title: "Students",
     routeName: "students",
@@ -342,7 +342,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  gadgets: {
     id: 8,
     title: "Gadgets",
     routeName: "gadgets",
@@ -391,7 +391,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  homes: {
     id: 9,
     title: "Homes",
     routeName: "homes",
@@ -440,7 +440,7 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  pets: {
     id: 10,
     title: "Pets",
     routeName: "pets",
@@ -489,6 +489,6 @@ const SHOP_DATA = [
       },
     ],
   },
-];
+};
 
 export default SHOP_DATA;

@@ -16,10 +16,19 @@ const COLLECTION_ID_MAP = {
 const shopSelector = (state) => state.shop;
 export const shopCollectionsSelector = createSelector(
   [shopSelector],
-  (shop) => shop.collections
+  (shop) => {
+    console.log(shop.collection);
+    return shop.collections;
+  }
+);
+
+export const selectCollectionsArray = createSelector(
+  [shopCollectionsSelector],
+  (collections) => Object.keys(collections).map((key) => collections[key])
 );
 
 export const selectCollection = (param) =>
-  createSelector([shopCollectionsSelector], (collections) =>
-    collections.find((collection) => collection.id === COLLECTION_ID_MAP[param])
+  createSelector(
+    [shopCollectionsSelector],
+    (collections) => collections[param]
   );
