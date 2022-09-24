@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Error404 from './components/error/error-404/Error404' 
@@ -33,6 +33,7 @@ function App() {
             id: snapShot.id,
             ...snapShot.data(),
           };
+          console.log(currUser)
           dispatch(setCurrentUser(currUser));
           /*setState((state) => {
             return {

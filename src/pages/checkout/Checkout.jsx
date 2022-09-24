@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors'
 import CheckoutItem from '../../components/checkout-item/CheckoutItem'
+import PaystackCheckoutButton from '../../components/paystack-button/PaystackButton'
 import './checkout.scss'
 
 const CheckoutPage = () => {
@@ -29,8 +30,9 @@ const CheckoutPage = () => {
         cartItems.map(cartItem => <CheckoutItem cartItem={cartItem}/>)
       }
       <div className='total'>
-        <span>TOTAL: ${total}</span>
+        <span>TOTAL: ₦{total}</span>
       </div>
+      <PaystackCheckoutButton price={total} />
     </div>
   )
 }
