@@ -32,6 +32,9 @@ const CheckoutPage = () => {
       <div className='total'>
         <span>TOTAL: ₦{total}</span>
       </div>
+      <div className='test-warning'>
+        *Please do not input your credit card for payments. This is just for testing
+      </div>
       <PaystackCheckoutButton price={total} />
     </div>
   )
