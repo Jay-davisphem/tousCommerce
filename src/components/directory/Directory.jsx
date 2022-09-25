@@ -1,12 +1,12 @@
 import "./directory.scss";
 import data from "../../data/directory";
-import {useSelector} from 'react-redux'
-import {selectDirectorySections} from '../../redux/directory/directory.selectors'
+import { useSelector } from "react-redux";
+import { selectDirectorySections } from "../../redux/directory/directory.selectors";
 import MenuItem from "../menu-item/MenuItem";
 
 const Directory = () => {
-  const sections = useSelector(state => selectDirectorySections(state))
-  console.log(console)
+  const sections = useSelector((state) => selectDirectorySections(state));
+  console.log(console);
   return (
     <div className="directory-menu">
       {sections?.map(({ title, id, imageUrl, size, linkUrl }) => (
