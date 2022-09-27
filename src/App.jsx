@@ -9,9 +9,10 @@ import ShopPage from "./pages/shop/ShopPage";
 import AuthPage from "./pages/auth/AuthPage";
 import CheckoutPage from "./pages/checkout/Checkout";
 import CollectionPage from "./pages/collection/Collection";
-import { auth } from "./firebase/firebase.utils";
+import { auth, addCollectionAndDocs } from "./firebase/firebase.utils";
 import { createUserProfileDocument } from "./firebase/userProfile";
 import { selectCurrentUser } from "./redux/user/user.selectors";
+import { selectCollectionsArray } from './redux/shop/shop.selectors'
 import { userActions } from "./redux";
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
 
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => selectCurrentUser(state));
+  const collectionsArray = useSelector(state => selectCollectionsArray(state))
 
   let unsubscribeAuth = null;
   useEffect(() => {
@@ -34,6 +36,7 @@ function App() {
           };
           console.log(currUser);
           dispatch(setCurrentUser(currUser));
+          addCollectionAndDocs('collections', collectionsArray.map(({title, items}) => ({title, items})))
           /*setState((state) => {
             return {
               currUser,

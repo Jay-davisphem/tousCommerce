@@ -6,7 +6,6 @@ import MenuItem from "../menu-item/MenuItem";
 
 const Directory = () => {
   const sections = useSelector((state) => selectDirectorySections(state));
-  console.log(console);
   return (
     <div className="directory-menu">
       {sections?.map(({ title, id, imageUrl, size, linkUrl }) => (
