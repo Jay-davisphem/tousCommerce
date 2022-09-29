@@ -8,8 +8,6 @@ const INITIAL_STATE = {
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ShopActionTypes.UPDATE_COLLECTIONS:
-      alert("it was done");
-      console.log(action.payload);
       return {
         ...state,
         collecions: action.payload,
