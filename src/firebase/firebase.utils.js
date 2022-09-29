@@ -35,7 +35,7 @@ export const addCollectionAndDocs = async (collectionKey, objectsToAdd) => {
 
 export const convertCollectionsSnapshotToMap = (snapshot) => {
   const transCol = snapshot.docs.map((doc) => {
-    const [title, items] = doc.data();
+    const { title, items } = doc.data();
     return {
       routeName: encodeURI(title.toLowerCase()),
       id: doc.id,
@@ -43,10 +43,10 @@ export const convertCollectionsSnapshotToMap = (snapshot) => {
       items,
     };
   });
-  transCol.reduce((acc, col)=> {
-    acc[collection.title.toLowerCase()] = collection
+  return transCol.reduce((acc, col) => {
+    acc[col.title.toLowerCase()] = col;
     return acc;
-  })
+  });
 };
 
 export default firebase;

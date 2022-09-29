@@ -36,7 +36,7 @@ function App() {
           };
           console.log(currUser);
           dispatch(setCurrentUser(currUser));
-          addCollectionAndDocs('collections', collectionsArray.map(({title, items}) => ({title, items})))
+          //addCollectionAndDocs('collections', collectionsArray.map(({title, items}) => ({title, items})))
           /*setState((state) => {
             return {
               currUser,

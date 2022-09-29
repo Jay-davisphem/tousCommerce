@@ -2,18 +2,23 @@ import {useEffect} from 'react'
 
 import CollectionOverview from "../../components/collection-overview/CollectionOverview";
 import {firestore, convertCollectionsSnapshotToMap} from '../../firebase/firebase.utils'
+import  {updateCollections} from '../../redux/shop/shop.actions'
+import {useDispatch} from 'react-redux'
+
 const ShopPage = () => {
-  const unsubscritbeFromSnapshot = null
+
+  const dispatch = useDispatch()
+
+  let unsubscritbeFromSnapshot = null
   useEffect(() => {
     const collectionRef = firestore.collection('collections')
-
-
-    collectionRef.onSnapshot(async snapshot => {
-      const convertCollectionsSnapshotToMap(snapshot)
+    unsubscritbeFromSnapshot = collectionRef.onSnapshot(async snapshot => {
+      const colsMap = convertCollectionsSnapshotToMap(snapshot)
+      dispatch(updateCollections(colsMap))
     })
+   //return unsubscritbeFromSnapshot();
   }, [])
 
-  console.log(location, "my history");
   return (
     <div className="shop-page">
       <CollectionOverview />
