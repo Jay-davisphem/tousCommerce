@@ -12,7 +12,7 @@ import CollectionPage from "./pages/collection/Collection";
 import { auth, addCollectionAndDocs } from "./firebase/firebase.utils";
 import { createUserProfileDocument } from "./firebase/userProfile";
 import { selectCurrentUser } from "./redux/user/user.selectors";
-import { selectCollectionsArray } from './redux/shop/shop.selectors'
+import { selectCollectionsArray } from "./redux/shop/shop.selectors";
 import { userActions } from "./redux";
 import "./App.css";
 
@@ -21,7 +21,9 @@ function App() {
 
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => selectCurrentUser(state));
-  const collectionsArray = useSelector(state => selectCollectionsArray(state))
+  const collectionsArray = useSelector((state) =>
+    selectCollectionsArray(state)
+  );
 
   let unsubscribeAuth = null;
   useEffect(() => {
@@ -54,20 +56,20 @@ function App() {
   }, []);
 
   return (
-      <main className="main">
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/shop/:collectionId" element={<CollectionPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route
-            path="/auth"
-            element={currentUser ? <Navigate to="/" replace /> : <AuthPage />}
-          />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-      </main>
+    <main className="main">
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/shop/:collectionId" element={<CollectionPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route
+          path="/auth"
+          element={currentUser ? <Navigate to="/" replace /> : <AuthPage />}
+        />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </main>
   );
 }
 

@@ -15,7 +15,6 @@ export const selectCollectionsArray = createSelector(
 );
 
 export const selectCollection = (param) =>
-  createSelector(
-    [shopCollectionsSelector],
-    (collections) => collections[param]
+  createSelector([shopCollectionsSelector], (collections) =>
+    collections ? collections[param] : null
   );
