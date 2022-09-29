@@ -9,7 +9,7 @@ const shopReducer = (state = INITIAL_STATE, action) => {
     case ShopActionTypes.UPDATE_COLLECTIONS:
       return {
         ...state,
-        collecions: action.payload,
+        collections: action.payload,
       };
     default:
       return state;

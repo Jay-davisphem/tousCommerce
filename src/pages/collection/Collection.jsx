@@ -6,6 +6,7 @@ import CollectionItem from "../../components/collection-item/CollectionItem";
 import Error404 from "../../components/error/error-404/Error404";
 import { selectCollection } from "../../redux/shop/shop.selectors";
 
+
 const CollectionPage = () => {
   const collectionId = useParams().collectionId;
   const memoizedSelect = useMemo(
@@ -26,4 +27,4 @@ const CollectionPage = () => {
     </div>
   );
 };
-export default CollectionPage;
+export default CollectionPage

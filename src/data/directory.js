@@ -50,7 +50,7 @@ const sections = [
       "https://cdn.pixabay.com/photo/2013/12/22/15/30/motherboard-232515_960_720.jpg",
     size: "large",
     id: 8,
-    linkUrl: "shop/tech-electonics",
+    linkUrl: "shop/gadgets",
   },
   {
     title: "HOME",
@@ -58,7 +58,7 @@ const sections = [
       "https://cdn.pixabay.com/photo/2017/02/24/17/44/retro-2095749_960_720.jpg",
     size: "large",
     id: 9,
-    linkUrl: "shop/utensils-domestics",
+    linkUrl: "shop/homes",
   },
   {
     title: "PETS",
