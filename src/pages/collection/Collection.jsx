@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./collection.scss";
@@ -6,14 +6,13 @@ import CollectionItem from "../../components/collection-item/CollectionItem";
 import Error404 from "../../components/error/error-404/Error404";
 import { selectCollection } from "../../redux/shop/shop.selectors";
 
-
 const CollectionPage = () => {
   const collectionId = useParams().collectionId;
   const memoizedSelect = useMemo(
     () => selectCollection(collectionId),
     [collectionId]
   );
-  const collection = useSelector((state) => memoizedSelect(state));
+  let collection = useSelector((state) => memoizedSelect(state));
   const { title, items } = collection ? collection : { title: "", items: [] };
   if (!title) return <Error404 page={collectionId} />;
   return (
@@ -27,4 +26,4 @@ const CollectionPage = () => {
     </div>
   );
 };
-export default CollectionPage
+export default CollectionPage;
