@@ -62,7 +62,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/shop/:collectionId" element={<CollectionPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/checkout" element={currentUser? <CheckoutPage />: <AuthPage />} />
         <Route
           path="/auth"
           element={currentUser ? <Navigate to="/" replace /> : <AuthPage />}
