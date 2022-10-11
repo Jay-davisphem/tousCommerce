@@ -46,7 +46,7 @@ export const convertCollectionsSnapshotToMap = (snapshot) => {
   return transCol.reduce((acc, col) => {
     acc[col.title.toLowerCase()] = col;
     return acc;
-  });
+  }, {});
 };
 
 export default firebase;
