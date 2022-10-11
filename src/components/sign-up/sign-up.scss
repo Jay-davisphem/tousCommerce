@@ -13,3 +13,10 @@
     gap: 2em;
   }
 }
+
+@media (max-width: 650px) {
+  .sign-up {
+    margin-top: 100px;
+    width: 100%;
+  }
+}

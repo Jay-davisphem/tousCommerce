@@ -22,7 +22,7 @@ const Header = () => {
         <Link className="option" to="/shop" onClick={() => dispatch(hideCart())}>
           SHOP
         </Link>
-        <Link className="option" to="/contact" onClick={() => dispatch(hideCart())}>
+        <Link className="option hide-contact" to="/contact" onClick={() => dispatch(hideCart())}>
           CONTACT
         </Link>
         {currentUser ? (

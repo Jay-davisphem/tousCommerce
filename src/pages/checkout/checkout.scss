@@ -34,3 +34,19 @@
     color: red;
   }
 }
+.show-me-for-mobile {
+  display: none;
+}
+@media (max-width: 500px) {
+  .checkout-page.hide-me-for-mobile {
+    display: none;
+  }
+  .show-me-for-mobile {
+    display: block;
+    color: red;
+    .total {
+      color: black;
+      font-size: 2rem;
+    }
+  }
+}

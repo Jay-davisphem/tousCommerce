@@ -11,7 +11,15 @@ const CheckoutPage = () => {
   const cartItems = useSelector((state) => selectCartItems(state));
   const total = useSelector((state) => selectCartTotal(state));
   return (
-    <div className="checkout-page">
+    <>
+      <div className='checkout-page show-me-for-mobile'>
+        <div classname='test-warning'>To manipulate checkout items please, switch to desktop mode</div>
+      <div className="total">
+        <span>TOTAL: ₦{total}</span>
+      </div>
+        <PaystackCheckoutButton price={total} />
+      </div>
+    <div className="checkout-page hide-me-for-mobile">
       <div className="checkout-header">
         <div className="header-block">
           <span>Product</span>
@@ -41,6 +49,7 @@ const CheckoutPage = () => {
       </div>
       <PaystackCheckoutButton price={total} />
     </div>
+    </>
   );
 };
 export default CheckoutPage;

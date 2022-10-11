@@ -23,3 +23,15 @@
     }
   }
 }
+
+@media (max-width: 650px) {
+  .header {
+    .logo-container {
+      max-height: 50%;
+      width: 0px;
+    }
+    .hide-contact {
+      display: none;
+    }
+  }
+}
