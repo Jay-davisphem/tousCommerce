@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=UnifrakturMaguntia&display=swap");
+:root {
+  --main-color: #f8f9fa;
+  --header-color: var(--main-color);
+}
 body {
+  background-color: var(--main-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

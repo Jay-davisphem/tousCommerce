@@ -58,6 +58,9 @@ function App() {
   return (
     <main className="main">
       <Header />
+      <div style={{
+        backgroundColor: 'var(--main-color)',
+        }}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
@@ -69,6 +72,7 @@ function App() {
         />
         <Route path="*" element={<Error404 />} />
       </Routes>
+      </div>
     </main>
   );
 }
